@@ -1,0 +1,40 @@
+{
+    "name": "@daihy8759/clipboard",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "module": "esm/index.js",
+    "license": "MIT",
+    "files": [
+        "lib/",
+        "esm/"
+    ],
+    "keywords": [
+        "clipboard"
+    ],
+    "author": "daihy<dai85939260@163.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/daihy8759/clipboard"
+    },
+    "bugs": {
+        "url": "https://github.com/daihy8759/clipboard/issues"
+    },
+    "homepage": "https://github.com/daihy8759/clipboard#readme",
+    "scripts": {
+        "build:cjs": "tsc",
+        "build:es": "tsc -m esNext --outDir esm",
+        "build": "yarn build:cjs && yarn build:es",
+        "clean": "rimraf esm && rimraf lib",
+        "prepare": "yarn clean && yarn build"
+    },
+    "dependencies": {
+        "good-listener": "^1.2.2",
+        "select": "^1.1.2",
+        "tiny-emitter": "^2.1.0"
+    },
+    "devDependencies": {
+        "rimraf": "^3.0.2",
+        "tslib": "^2.1.0",
+        "typescript": "^4.1.3"
+    }
+}
